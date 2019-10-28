@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crook(ed) app</title>
+    <style>
+        #slideholder_eyes {
+            height: 300px;
+            width: 600px;
+            margin-left:auto;
+            margin-right:auto;
+            border:1px black solid;
+        }
+        #slideholder_nose {
+            height: 300px;
+            width: 600px;
+            margin-left:auto;
+            margin-right:auto;
+            border:1px black solid;
+        }
+        #slideholder_mouth {
+            height: 300px;
+            width: 600px;
+            margin-left:auto;
+            margin-right:auto;
+            border:1px black solid;
+        }
+        h1 {
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1><b>Crooked app.</b></h1>
+    <div id="slideholder_eyes"></div>
+    <script>
+        var images1 = [1,2,3];
+        var teller1 = 0;
+        var slideholder_eyes = document.getElementById("slideholder_eyes");
+        slideholder_eyes.style.backgroundImage = "url('img1/CrookedFace1.jpg')";
+
+        slideholder_eyes.addEventListener("click", function(){
+            slideholder_eyes.style.backgroundImage = "url('img1/CrookedFace" + getCrookedFace1() + ".jpg')";
+        });
+
+        function getCrookedFace1(){
+            if(teller1 >=images1.length){
+                teller1 = 1;
+            } else {
+                teller1++;
+            }
+            console.log(teller1);
+            return teller1;
+        }
+    </script>
+
+    <div id="slideholder_nose"></div>
+    <script>
+        var images2 = [1,2,3];
+        var teller2 = 0;
+        var slideholder_nose = document.getElementById("slideholder_nose");
+        slideholder_nose.style.backgroundImage = "url('img2/CrookedFace2.jpg')";
+
+        slideholder_nose.addEventListener("click", function(){
+            slideholder_nose.style.backgroundImage = "url('img2/CrookedFace" + getCrookedFace2() + ".jpg')";
+        });
+
+        function getCrookedFace2(){
+            if(teller2 >=images2.length){
+                teller2 = 1;
+            } else {
+                teller2++;
+            }
+            console.log(teller2);
+            return teller2;
+        }
+    </script>
+
+    <div id="slideholder_mouth"></div>
+    <script>
+        var images3 = [1,2,3];
+        var teller3 = 0;
+        var slideholder_mouth = document.getElementById("slideholder_mouth");
+        slideholder_mouth.style.backgroundImage = "url('img3/CrookedFace3.jpg')";
+
+        slideholder_mouth.addEventListener("click", function(){
+            slideholder_mouth.style.backgroundImage = "url('img3/CrookedFace" + getCrookedFace3() + ".jpg')";
+        });
+
+        function getCrookedFace3(){
+            if(teller3 >=images3.length){
+                teller3 = 1;
+            } else {
+                teller3++;
+            }
+            console.log(teller3);
+            return teller3;
+        }
+    </script>
+</body>
+</html>
